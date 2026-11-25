@@ -34,4 +34,1192 @@
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, sans-serif;
-      background:
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.45;
+      padding-bottom: 84px;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(250, 248, 245, 0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+
+    .brand h1 {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    .brand span {
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .header-actions {
+      display: flex;
+      gap: 8px;
+    }
+
+    button {
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 500;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      padding: 7px 14px;
+      cursor: pointer;
+      transition: background 0.15s, border-color 0.15s;
+    }
+
+    button:active {
+      transform: scale(0.98);
+    }
+
+    button.primary {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #FFFFFF;
+    }
+
+    button.ghost {
+      background: transparent;
+      border-color: transparent;
+      color: var(--muted);
+      padding: 6px 10px;
+    }
+
+    main {
+      max-width: 560px;
+      margin: 0 auto;
+      padding: 16px;
+    }
+
+    .search-row {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    input, select {
+      width: 100%;
+      font-family: inherit;
+      font-size: 14px;
+      color: var(--text);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px 12px;
+      outline: none;
+    }
+
+    input:focus, select:focus {
+      border-color: var(--accent);
+    }
+
+    .filters {
+      display: flex;
+      gap: 6px;
+      overflow-x: auto;
+      padding-bottom: 10px;
+      margin-bottom: 8px;
+      scrollbar-width: none;
+    }
+
+    .filters::-webkit-scrollbar {
+      display: none;
+    }
+
+    .chip {
+      white-space: nowrap;
+      font-size: 12px;
+      padding: 5px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--muted);
+    }
+
+    .chip.active {
+      background: var(--text);
+      border-color: var(--text);
+      color: #FFFFFF;
+    }
+
+    .list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 14px 16px;
+    }
+
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .card-brand {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--muted);
+      margin-bottom: 2px;
+    }
+
+    .card-title {
+      font-size: 15px;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .badge {
+      font-size: 11px;
+      font-weight: 500;
+      padding: 3px 9px;
+      border-radius: 999px;
+      white-space: nowrap;
+      cursor: pointer;
+    }
+
+    .badge.ok {
+      background: var(--accent-soft);
+      color: var(--accent);
+    }
+
+    .badge.low {
+      background: var(--warn-soft);
+      color: var(--warn);
+    }
+
+    .badge.out {
+      background: var(--danger-soft);
+      color: var(--danger);
+    }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+    }
+
+    .meta-item label {
+      display: block;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--muted);
+    }
+
+    .meta-item span {
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .card-actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 12px;
+      padding-top: 10px;
+      border-top: 1px solid var(--border);
+      gap: 8px;
+    }
+
+    .card-actions-left, .card-actions-right {
+      display: flex;
+      gap: 6px;
+    }
+
+    .btn-sm {
+      font-size: 12px;
+      padding: 5px 11px;
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 48px 20px;
+      color: var(--muted);
+      font-size: 14px;
+      border: 1px dashed var(--border);
+      border-radius: var(--radius);
+    }
+
+    .shop-summary {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 14px 16px;
+      margin-bottom: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .shop-summary strong {
+      font-size: 16px;
+    }
+
+    .settings-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px;
+      margin-bottom: 12px;
+    }
+
+    .settings-box h3 {
+      margin: 0 0 6px 0;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .settings-box p {
+      margin: 0 0 12px 0;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .row-btns {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    nav.bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(10px);
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-around;
+      padding: 8px 0 calc(8px + env(safe-area-inset-bottom));
+      z-index: 20;
+    }
+
+    .nav-btn {
+      border: none;
+      background: transparent;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 500;
+      padding: 6px 14px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-btn.active {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .nav-pill {
+      background: var(--warn-soft);
+      color: var(--warn);
+      font-size: 11px;
+      padding: 1px 6px;
+      border-radius: 999px;
+    }
+
+    /* Modal */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(31, 30, 28, 0.45);
+      display: none;
+      align-items: flex-end;
+      justify-content: center;
+      z-index: 50;
+    }
+
+    .modal-backdrop.open {
+      display: flex;
+    }
+
+    .modal {
+      background: var(--bg);
+      width: 100%;
+      max-width: 560px;
+      max-height: 92vh;
+      overflow-y: auto;
+      border-radius: 18px 18px 0 0;
+      padding: 18px 18px 28px;
+      border-top: 1px solid var(--border);
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+
+    .modal-header h2 {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .form-group {
+      margin-bottom: 12px;
+      position: relative;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .autocomplete-list {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 100%;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      margin-top: 4px;
+      max-height: 190px;
+      overflow-y: auto;
+      z-index: 30;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    }
+
+    .autocomplete-item {
+      padding: 9px 12px;
+      border-bottom: 1px solid var(--border);
+      cursor: pointer;
+      font-size: 13px;
+    }
+
+    .autocomplete-item:last-child {
+      border-bottom: none;
+    }
+
+    .autocomplete-item small {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    #scanner-wrapper {
+      display: none;
+      margin-bottom: 14px;
+      background: #000;
+      border-radius: 12px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    #reader {
+      width: 100%;
+    }
+
+    .scan-status {
+      font-size: 12px;
+      color: var(--accent);
+      margin-top: 6px;
+    }
+
+    .toast {
+      position: fixed;
+      top: 68px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--text);
+      color: #FFFFFF;
+      font-size: 12px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      z-index: 80;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s;
+    }
+
+    .toast.show {
+      opacity: 1;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      <h1>BeautyStock</h1>
+      <span>UK</span>
+    </div>
+    <div class="header-actions">
+      <button onclick="openAddModal(true)">Scan</button>
+      <button class="primary" onclick="openAddModal(false)">+ Add</button>
+    </div>
+  </header>
+
+  <div id="toast" class="toast"></div>
+
+  <main>
+    <!-- VIEW 1: SHELF -->
+    <section id="view-shelf">
+      <div class="search-row">
+        <input type="search" id="searchInput" placeholder="Search products or brands..." oninput="render()" />
+      </div>
+      <div class="filters" id="categoryFilters"></div>
+      <div class="list" id="shelfList"></div>
+    </section>
+
+    <!-- VIEW 2: SHOPPING LIST -->
+    <section id="view-shop" class="hidden">
+      <div class="shop-summary">
+        <div>
+          <div style="font-size:12px;color:var(--muted);">Restock Basket</div>
+          <strong id="shopCount">0 items</strong>
+        </div>
+        <div style="text-align:right;">
+          <div style="font-size:12px;color:var(--muted);">Estimated Total</div>
+          <strong id="shopTotal">£0.00</strong>
+        </div>
+      </div>
+      <div class="list" id="shopList"></div>
+    </section>
+
+    <!-- VIEW 3: SETTINGS & REMINDERS -->
+    <section id="view-settings" class="hidden">
+      <div class="settings-box">
+        <h3>Shopping Reminders</h3>
+        <p>Send a reminder notification when items are marked Running Low or Finished.</p>
+        <div class="row-btns">
+          <button onclick="requestNotifications()">Enable Notifications</button>
+          <button onclick="sendTestReminder()">Test Reminder</button>
+        </div>
+      </div>
+
+      <div class="settings-box">
+        <h3>Store Proximity Alert</h3>
+        <p id="geoStatus">Save your local Boots, Superdrug, or cosmetics shop location to get alerted when nearby while the app is open.</p>
+        <div class="row-btns">
+          <button onclick="saveCurrentStoreLocation()">Save Current Shop Location</button>
+          <button onclick="checkProximityNow()">Check Nearby</button>
+        </div>
+      </div>
+
+      <div class="settings-box">
+        <h3>Backup & Restore</h3>
+        <p>Your inventory is stored locally on this phone. Export a JSON copy anytime.</p>
+        <div class="row-btns">
+          <button onclick="exportData()">Export Backup</button>
+          <button onclick="document.getElementById('importFile').click()">Import Backup</button>
+          <input type="file" id="importFile" accept=".json" class="hidden" onchange="importData(event)" />
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <nav class="bottom-nav">
+    <button class="nav-btn active" id="nav-shelf" onclick="switchTab('shelf')">Shelf</button>
+    <button class="nav-btn" id="nav-shop" onclick="switchTab('shop')">
+      Shopping List <span class="nav-pill" id="navShopBadge">0</span>
+    </button>
+    <button class="nav-btn" id="nav-settings" onclick="switchTab('settings')">Reminders</button>
+  </nav>
+
+  <!-- ADD / EDIT MODAL -->
+  <div class="modal-backdrop" id="productModal">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 id="modalTitle">Add Product</h2>
+        <button class="ghost" onclick="closeModal()">Close</button>
+      </div>
+
+      <div class="form-group">
+        <div style="display:flex;gap:8px;">
+          <button type="button" id="toggleScanBtn" onclick="toggleScanner()" style="flex:1;">Scan UK Barcode</button>
+          <input type="text" id="barcodeInput" placeholder="Or enter EAN barcode" style="flex:1.2;" />
+          <button type="button" onclick="lookupBarcode(document.getElementById('barcodeInput').value)">Lookup</button>
+        </div>
+        <div id="scanStatus" class="scan-status"></div>
+      </div>
+
+      <div id="scanner-wrapper">
+        <div id="reader"></div>
+      </div>
+
+      <form id="productForm" onsubmit="saveProduct(event)">
+        <input type="hidden" id="editId" />
+
+        <div class="form-group">
+          <label>Product Name *</label>
+          <input type="text" id="prodName" required autocomplete="off" placeholder="e.g. CeraVe Hydrating Cleanser" oninput="handleAutocomplete(this.value)" />
+          <div id="autocompleteBox" class="autocomplete-list hidden"></div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Brand</label>
+            <input type="text" id="prodBrand" placeholder="e.g. No7, Simple" />
+          </div>
+          <div class="form-group">
+            <label>Category</label>
+            <select id="prodCategory">
+              <option value="Skincare">Skincare</option>
+              <option value="Makeup">Makeup</option>
+              <option value="Haircare">Haircare</option>
+              <option value="Body">Body</option>
+              <option value="Fragrance">Fragrance</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Price (£)</label>
+            <input type="number" id="prodPrice" step="0.01" min="0" placeholder="12.50" />
+          </div>
+          <div class="form-group">
+            <label>Purchase Date</label>
+            <input type="date" id="prodDate" />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Uses Logged</label>
+            <input type="number" id="prodUses" min="0" value="0" />
+          </div>
+          <div class="form-group">
+            <label>Est. Total Uses (Lifespan)</label>
+            <input type="number" id="prodEstUses" min="1" placeholder="e.g. 60" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Stock Status</label>
+          <select id="prodStatus">
+            <option value="ok">In Stock</option>
+            <option value="low">Running Low (Adds to Shopping List)</option>
+            <option value="out">Finished / Out (Adds to Shopping List)</option>
+          </select>
+        </div>
+
+        <div style="display:flex;gap:8px;margin-top:16px;">
+          <button type="button" id="deleteBtn" class="hidden" style="color:var(--danger);border-color:var(--danger-soft);" onclick="deleteCurrentProduct()">Delete</button>
+          <button type="submit" class="primary" style="flex:1;padding:11px;">Save Product</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const STORAGE_KEY = 'beautystock_uk_items_v1';
+    const BARCODE_CACHE_KEY = 'beautystock_uk_barcodes_v1';
+    const STORE_LOC_KEY = 'beautystock_uk_store_loc_v1';
+
+    let items = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+    let barcodeCache = JSON.parse(localStorage.getItem(BARCODE_CACHE_KEY) || '{}');
+    let activeCategory = 'All';
+    let currentTab = 'shelf';
+    let html5QrCode = null;
+    let isScanning = false;
+    let searchTimeout = null;
+
+    // Seed starter UK examples on first visit if empty
+    if (items.length === 0 && !localStorage.getItem('beautystock_initialized')) {
+      const twoWeeksAgo = new Date(Date.now() - 14 * 86400000).toISOString().split('T')[0];
+      const twoMonthsAgo = new Date(Date.now() - 62 * 86400000).toISOString().split('T')[0];
+      items = [
+        {
+          id: 'demo-1',
+          name: 'Hydrating Cleanser 236ml',
+          brand: 'CeraVe',
+          category: 'Skincare',
+          price: 11.50,
+          purchaseDate: twoWeeksAgo,
+          uses: 24,
+          estUses: 90,
+          status: 'ok',
+          barcode: '3337875597180'
+        },
+        {
+          id: 'demo-2',
+          name: 'Lash Sensational Sky High Mascara',
+          brand: 'Maybelline',
+          category: 'Makeup',
+          price: 11.99,
+          purchaseDate: twoMonthsAgo,
+          uses: 55,
+          estUses: 60,
+          status: 'low',
+          barcode: '3600531632281'
+        }
+      ];
+      localStorage.setItem('beautystock_initialized', '1');
+      saveState();
+    }
+
+    function saveState() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
+      render();
+    }
+
+    function showToast(msg) {
+      const el = document.getElementById('toast');
+      el.textContent = msg;
+      el.classList.add('show');
+      setTimeout(() => el.classList.remove('show'), 2600);
+    }
+
+    function formatDaysSince(dateStr) {
+      if (!dateStr) return 'No date';
+      const diff = Math.floor((Date.now() - new Date(dateStr).getTime()) / 86400000);
+      if (diff <= 0) return 'Today';
+      if (diff === 1) return '1 day ago';
+      if (diff < 30) return `${diff} days ago`;
+      const months = Math.floor(diff / 30);
+      return months === 1 ? '1 mo ago' : `${months} mos ago`;
+    }
+
+    function formatCostPerUse(price, uses) {
+      const p = parseFloat(price);
+      if (!p || p <= 0) return '—';
+      if (!uses || uses <= 0) return `£${p.toFixed(2)} (0 uses)`;
+      const cpu = p / uses;
+      return `£${cpu.toFixed(2)} / use`;
+    }
+
+    function switchTab(tab) {
+      currentTab = tab;
+      ['shelf', 'shop', 'settings'].forEach(t => {
+        document.getElementById(`view-${t}`).classList.toggle('hidden', t !== tab);
+        document.getElementById(`nav-${t}`).classList.toggle('active', t === tab);
+      });
+      render();
+    }
+
+    function cycleStatus(id) {
+      const item = items.find(i => i.id === id);
+      if (!item) return;
+      const order = ['ok', 'low', 'out'];
+      item.status = order[(order.indexOf(item.status) + 1) % order.length];
+      saveState();
+      if (item.status !== 'ok') {
+        showToast(`Added "${item.name}" to Shopping List`);
+      }
+    }
+
+    function incrementUse(id) {
+      const item = items.find(i => i.id === id);
+      if (!item) return;
+      item.uses = (parseInt(item.uses, 10) || 0) + 1;
+      if (item.estUses && item.uses >= Math.floor(item.estUses * 0.85) && item.status === 'ok') {
+        item.status = 'low';
+        showToast(`Running low on ${item.name} — added to Shopping List`);
+      }
+      saveState();
+    }
+
+    function markRestocked(id) {
+      const item = items.find(i => i.id === id);
+      if (!item) return;
+      item.status = 'ok';
+      item.uses = 0;
+      item.purchaseDate = new Date().toISOString().split('T')[0];
+      saveState();
+      showToast(`Restocked "${item.name}" — timer & uses reset`);
+    }
+
+    function render() {
+      const query = document.getElementById('searchInput').value.trim().toLowerCase();
+      const categories = ['All', 'Skincare', 'Makeup', 'Haircare', 'Body', 'Fragrance', 'Other'];
+
+      document.getElementById('categoryFilters').innerHTML = categories.map(cat => `
+        <button class="chip ${activeCategory === cat ? 'active' : ''}" onclick="activeCategory='${cat}';render()">${cat}</button>
+      `).join('');
+
+      const filtered = items.filter(item => {
+        const matchesCat = activeCategory === 'All' || item.category === activeCategory;
+        const matchesQuery = !query ||
+          item.name.toLowerCase().includes(query) ||
+          (item.brand && item.brand.toLowerCase().includes(query));
+        return matchesCat && matchesQuery;
+      });
+
+      const shelfList = document.getElementById('shelfList');
+      if (filtered.length === 0) {
+        shelfList.innerHTML = `<div class="empty-state">No products found. Tap <strong>+ Add</strong> or <strong>Scan</strong> to log your beauty shelf.</div>`;
+      } else {
+        shelfList.innerHTML = filtered.map(item => {
+          const statusLabel = item.status === 'ok' ? 'In Stock' : item.status === 'low' ? 'Running Low' : 'Finished';
+          const remaining = item.estUses ? ` / ${item.estUses}` : '';
+          return `
+            <div class="card">
+              <div class="card-top">
+                <div>
+                  <div class="card-brand">${escapeHtml(item.brand || item.category)}</div>
+                  <h3 class="card-title">${escapeHtml(item.name)}</h3>
+                </div>
+                <span class="badge ${item.status}" onclick="cycleStatus('${item.id}')" title="Tap to change stock status">${statusLabel}</span>
+              </div>
+              <div class="meta-grid">
+                <div class="meta-item">
+                  <label>Cost / Use</label>
+                  <span>${formatCostPerUse(item.price, item.uses)}</span>
+                </div>
+                <div class="meta-item">
+                  <label>Purchased</label>
+                  <span>${formatDaysSince(item.purchaseDate)}</span>
+                </div>
+                <div class="meta-item">
+                  <label>Uses</label>
+                  <span>${item.uses || 0}${remaining}</span>
+                </div>
+              </div>
+              <div class="card-actions">
+                <div class="card-actions-left">
+                  <button class="btn-sm primary" onclick="incrementUse('${item.id}')">+1 Use</button>
+                  <button class="btn-sm" onclick="cycleStatus('${item.id}')">${item.status === 'ok' ? 'Flag Low' : 'Status'}</button>
+                </div>
+                <div class="card-actions-right">
+                  <button class="btn-sm ghost" onclick="openEditModal('${item.id}')">Edit</button>
+                </div>
+              </div>
+            </div>
+          `;
+        }).join('');
+      }
+
+      // Shopping list items
+      const toBuy = items.filter(i => i.status === 'low' || i.status === 'out');
+      document.getElementById('navShopBadge').textContent = toBuy.length;
+      document.getElementById('shopCount').textContent = `${toBuy.length} ${toBuy.length === 1 ? 'item' : 'items'}`;
+      const estTotal = toBuy.reduce((sum, i) => sum + (parseFloat(i.price) || 0), 0);
+      document.getElementById('shopTotal').textContent = `£${estTotal.toFixed(2)}`;
+
+      const shopList = document.getElementById('shopList');
+      if (toBuy.length === 0) {
+        shopList.innerHTML = `<div class="empty-state">Your shopping list is clear. Products marked <strong>Running Low</strong> or <strong>Finished</strong> appear here automatically.</div>`;
+      } else {
+        shopList.innerHTML = toBuy.map(item => `
+          <div class="card">
+            <div class="card-top">
+              <div>
+                <div class="card-brand">${escapeHtml(item.brand || item.category)} · ${item.status === 'out' ? 'Finished' : 'Running Low'}</div>
+                <h3 class="card-title">${escapeHtml(item.name)}</h3>
+                <div style="font-size:12px;color:var(--muted);margin-top:4px;">
+                  Last bought ${formatDaysSince(item.purchaseDate)} · Est. £${(parseFloat(item.price) || 0).toFixed(2)}
+                </div>
+              </div>
+              <button class="primary btn-sm" onclick="markRestocked('${item.id}')">Bought</button>
+            </div>
+          </div>
+        `).join('');
+      }
+    }
+
+    function escapeHtml(str) {
+      return String(str || '').replace(/[&<>"']/g, m => ({
+        '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+      }[m]));
+    }
+
+    // Modal & Form Logic
+    function openAddModal(autoScan = false) {
+      document.getElementById('modalTitle').textContent = 'Add Product';
+      document.getElementById('productForm').reset();
+      document.getElementById('editId').value = '';
+      document.getElementById('barcodeInput').value = '';
+      document.getElementById('scanStatus').textContent = '';
+      document.getElementById('prodDate').value = new Date().toISOString().split('T')[0];
+      document.getElementById('deleteBtn').classList.add('hidden');
+      document.getElementById('autocompleteBox').classList.add('hidden');
+      document.getElementById('productModal').classList.add('open');
+      if (autoScan) {
+        startScanner();
+      }
+    }
+
+    function openEditModal(id) {
+      const item = items.find(i => i.id === id);
+      if (!item) return;
+      document.getElementById('modalTitle').textContent = 'Edit Product';
+      document.getElementById('editId').value = item.id;
+      document.getElementById('barcodeInput').value = item.barcode || '';
+      document.getElementById('scanStatus').textContent = '';
+      document.getElementById('prodName').value = item.name;
+      document.getElementById('prodBrand').value = item.brand || '';
+      document.getElementById('prodCategory').value = item.category || 'Skincare';
+      document.getElementById('prodPrice').value = item.price || '';
+      document.getElementById('prodDate').value = item.purchaseDate || '';
+      document.getElementById('prodUses').value = item.uses || 0;
+      document.getElementById('prodEstUses').value = item.estUses || '';
+      document.getElementById('prodStatus').value = item.status || 'ok';
+      document.getElementById('deleteBtn').classList.remove('hidden');
+      document.getElementById('autocompleteBox').classList.add('hidden');
+      document.getElementById('productModal').classList.add('open');
+    }
+
+    function closeModal() {
+      stopScanner();
+      document.getElementById('productModal').classList.remove('open');
+    }
+
+    function saveProduct(e) {
+      e.preventDefault();
+      const id = document.getElementById('editId').value || 'item-' + Date.now();
+      const barcode = document.getElementById('barcodeInput').value.trim();
+      const name = document.getElementById('prodName').value.trim();
+      const brand = document.getElementById('prodBrand').value.trim();
+      const category = document.getElementById('prodCategory').value;
+      const price = parseFloat(document.getElementById('prodPrice').value) || 0;
+      const purchaseDate = document.getElementById('prodDate').value;
+      const uses = parseInt(document.getElementById('prodUses').value, 10) || 0;
+      const estUses = parseInt(document.getElementById('prodEstUses').value, 10) || null;
+      const status = document.getElementById('prodStatus').value;
+
+      const record = { id, barcode, name, brand, category, price, purchaseDate, uses, estUses, status };
+      const existingIdx = items.findIndex(i => i.id === id);
+      if (existingIdx >= 0) {
+        items[existingIdx] = record;
+      } else {
+        items.unshift(record);
+      }
+
+      // Cache UK barcode locally for instant future recognition
+      if (barcode) {
+        barcodeCache[barcode] = { name, brand, category };
+        localStorage.setItem(BARCODE_CACHE_KEY, JSON.stringify(barcodeCache));
+      }
+
+      saveState();
+      closeModal();
+      showToast('Saved to BeautyStock');
+    }
+
+    function deleteCurrentProduct() {
+      const id = document.getElementById('editId').value;
+      items = items.filter(i => i.id !== id);
+      saveState();
+      closeModal();
+      showToast('Product removed');
+    }
+
+    // Universal UK Barcode Scanner (html5-qrcode)
+    function toggleScanner() {
+      if (isScanning) {
+        stopScanner();
+      } else {
+        startScanner();
+      }
+    }
+
+    async function startScanner() {
+      const wrapper = document.getElementById('scanner-wrapper');
+      const statusEl = document.getElementById('scanStatus');
+      const btn = document.getElementById('toggleScanBtn');
+
+      if (typeof Html5Qrcode === 'undefined') {
+        statusEl.textContent = 'Scanner library offline — enter barcode manually.';
+        return;
+      }
+
+      wrapper.style.display = 'block';
+      statusEl.textContent = 'Starting rear camera...';
+      btn.textContent = 'Stop Camera';
+
+      try {
+        html5QrCode = new Html5Qrcode('reader');
+        isScanning = true;
+        await html5QrCode.start(
+          { facingMode: 'environment' },
+          {
+            fps: 12,
+            qrbox: { width: 250, height: 130 },
+            formatsToSupport: [
+              Html5QrcodeSupportedFormats.EAN_13,
+              Html5QrcodeSupportedFormats.EAN_8,
+              Html5QrcodeSupportedFormats.UPC_A,
+              Html5QrcodeSupportedFormats.UPC_E
+            ]
+          },
+          (decodedText) => {
+            if (navigator.vibrate) navigator.vibrate(60);
+            document.getElementById('barcodeInput').value = decodedText;
+            stopScanner();
+            lookupBarcode(decodedText);
+          },
+          () => {}
+        );
+        statusEl.textContent = 'Align UK barcode (EAN-13) inside the frame';
+      } catch (err) {
+        isScanning = false;
+        wrapper.style.display = 'none';
+        btn.textContent = 'Scan UK Barcode';
+        statusEl.textContent = 'Camera unavailable. Check browser permissions or type barcode.';
+      }
+    }
+
+    async function stopScanner() {
+      const wrapper = document.getElementById('scanner-wrapper');
+      const btn = document.getElementById('toggleScanBtn');
+      if (html5QrCode && isScanning) {
+        try {
+          await html5QrCode.stop();
+          html5QrCode.clear();
+        } catch (e) {}
+      }
+      isScanning = false;
+      wrapper.style.display = 'none';
+      btn.textContent = 'Scan UK Barcode';
+    }
+
+    // Multi-database UK Barcode Lookup
+    async function lookupBarcode(rawCode) {
+      const code = String(rawCode || '').trim();
+      const statusEl = document.getElementById('scanStatus');
+      if (!code) return;
+
+      // 1. Check local UK cache first
+      if (barcodeCache[code]) {
+        const cached = barcodeCache[code];
+        document.getElementById('prodName').value = cached.name;
+        document.getElementById('prodBrand').value = cached.brand || '';
+        document.getElementById('prodCategory').value = cached.category || 'Skincare';
+        statusEl.textContent = `Recognised from your saved UK items (${code})`;
+        return;
+      }
+
+      statusEl.textContent = `Looking up UK barcode ${code}...`;
+
+      try {
+        // Query Open Beauty Facts & Open Products Facts in parallel
+        const [obfRes, opfRes] = await Promise.allSettled([
+          fetch(`https://world.openbeautyfacts.org/api/v0/product/${code}.json`).then(r => r.json()),
+          fetch(`https://world.openproductsfacts.org/api/v0/product/${code}.json`).then(r => r.json())
+        ]);
+
+        let product = null;
+        if (obfRes.status === 'fulfilled' && obfRes.value && obfRes.value.status === 1) {
+          product = obfRes.value.product;
+        } else if (opfRes.status === 'fulfilled' && opfRes.value && opfRes.value.status === 1) {
+          product = opfRes.value.product;
+        }
+
+        if (product) {
+          const title = product.product_name_en || product.product_name || '';
+          const brand = (product.brands || '').split(',')[0].trim();
+          const qty = product.quantity ? ` ${product.quantity}` : '';
+          if (title) document.getElementById('prodName').value = (title + qty).trim();
+          if (brand) document.getElementById('prodBrand').value = brand;
+          statusEl.textContent = `Found: ${brand ? brand + ' — ' : ''}${title || code}`;
+          return;
+        }
+
+        // Fallback: UPCitemdb trial endpoint (covers many UK/global EAN-13 cosmetics)
+        const upcRes = await fetch(`https://api.upcitemdb.com/prod/trial/lookup?upc=${code}`).then(r => r.json());
+        if (upcRes && upcRes.items && upcRes.items.length > 0) {
+          const item = upcRes.items[0];
+          document.getElementById('prodName').value = item.title || '';
+          document.getElementById('prodBrand').value = item.brand || '';
+          statusEl.textContent = `Found via UPC database: ${item.title}`;
+          return;
+        }
+
+        statusEl.textContent = `Barcode ${code} captured — not in public database yet. Enter name once to save it.`;
+      } catch (err) {
+        statusEl.textContent = `Barcode ${code} captured — enter product name below.`;
+      }
+    }
+
+    // Autocomplete search via Open Beauty Facts
+    function handleAutocomplete(val) {
+      clearTimeout(searchTimeout);
+      const box = document.getElementById('autocompleteBox');
+      if (val.trim().length < 3) {
+        box.classList.add('hidden');
+        return;
+      }
+
+      searchTimeout = setTimeout(async () => {
+        try {
+          const url = `https://world.openbeautyfacts.org/cgi/search.pl?search_terms=${encodeURIComponent(val)}&search_simple=1&action=process&json=1&page_size=6`;
+          const data = await fetch(url).then(r => r.json());
+          const products = (data.products || []).filter(p => p.product_name || p.product_name_en);
+          if (products.length === 0) {
+            box.classList.add('hidden');
+            return;
+          }
+          box.innerHTML = products.map((p, idx) => {
+            const name = p.product_name_en || p.product_name;
+            const brand = (p.brands || '').split(',')[0].trim();
+            const qty = p.quantity || '';
+            return `<div class="autocomplete-item" onclick='selectSuggestion(${JSON.stringify({ name, brand, qty, code: p.code || "" })})'>
+              ${escapeHtml(name)} ${escapeHtml(qty)}
+              <small>${escapeHtml(brand || 'Beauty Product')}</small>
+            </div>`;
+          }).join('');
+          box.classList.remove('hidden');
+        } catch (e) {
+          box.classList.add('hidden');
+        }
+      }, 350);
+    }
+
+    function selectSuggestion(item) {
+      document.getElementById('prodName').value = `${item.name} ${item.qty}`.trim();
+      if (item.brand) document.getElementById('prodBrand').value = item.brand;
+      if (item.code) document.getElementById('barcodeInput').value = item.code;
+      document.getElementById('autocompleteBox').classList.add('hidden');
+    }
+
+    // Notifications & Foreground Store Proximity
+    async function requestNotifications() {
+      if (!('Notification' in window)) {
+        showToast('Notifications not supported in this browser');
+        return;
+      }
+      const perm = await Notification.requestPermission();
+      showToast(perm === 'granted' ? 'Notifications enabled' : 'Notification permission denied');
+    }
+
+    function sendTestReminder() {
+      const toBuy = items.filter(i => i.status === 'low' || i.status === 'out');
+      const body = toBuy.length > 0
+        ? `Restock needed: ${toBuy.map(i => i.name).join(', ')}`
+        : 'All beauty essentials are currently in stock.';
+      if ('Notification' in window && Notification.permission === 'granted') {
+        new Notification('BeautyStock Reminder', { body });
+      } else {
+        showToast(body);
+      }
+    }
+
+    function saveCurrentStoreLocation() {
+      if (!navigator.geolocation) {
+        showToast('Geolocation not supported');
+        return;
+      }
+      navigator.geolocation.getCurrentPosition(pos => {
+        const loc = { lat: pos.coords.latitude, lon: pos.coords.longitude };
+        localStorage.setItem(STORE_LOC_KEY, JSON.stringify(loc));
+        document.getElementById('geoStatus').textContent = `Saved shop coordinates (${loc.lat.toFixed(4)}, ${loc.lon.toFixed(4)}).`;
+        showToast('Shop location saved');
+      }, () => showToast('Unable to get GPS location'));
+    }
+
+    function checkProximityNow() {
+      const saved = JSON.parse(localStorage.getItem(STORE_LOC_KEY) || 'null');
+      if (!saved) {
+        showToast('Save a shop location first');
+        return;
+      }
+      navigator.geolocation.getCurrentPosition(pos => {
+        const d = haversineMeters(saved.lat, saved.lon, pos.coords.latitude, pos.coords.longitude);
+        if (d <= 250) {
+          sendTestReminder();
+        } else {
+          showToast(`You are ${Math.round(d)}m from your saved shop`);
+        }
+      });
+    }
+
+    function haversineMeters(lat1, lon1, lat2, lon2) {
+      const R = 6371000;
+      const toRad = x => x * Math.PI / 180;
+      const dLat = toRad(lat2 - lat1);
+      const dLon = toRad(lon2 - lon1);
+      const a = Math.sin(dLat / 2) ** 2 + Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin(dLon / 2) ** 2;
+      return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    }
+
+    // Export / Import JSON
+    function exportData() {
+      const blob = new Blob([JSON.stringify({ items, barcodeCache }, null, 2)], { type: 'application/json' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = `beautystock-backup-${new Date().toISOString().split('T')[0]}.json`;
+      a.click();
+    }
+
+    function importData(e) {
+      const file = e.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = ev => {
+        try {
+          const parsed = JSON.parse(ev.target.result);
+          if (Array.isArray(parsed.items)) {
+            items = parsed.items;
+            if (parsed.barcodeCache) barcodeCache = parsed.barcodeCache;
+            localStorage.setItem(BARCODE_CACHE_KEY, JSON.stringify(barcodeCache));
+            saveState();
+            showToast('Backup restored');
+          }
+        } catch (err) {
+          showToast('Invalid backup file');
+        }
+      };
+      reader.readAsText(file);
+    }
+
+    // Lightweight inline PWA manifest
+    const manifest = {
+      name: 'BeautyStock',
+      short_name: 'BeautyStock',
+      start_url: './',
+      display: 'standalone',
+      background_color: '#FAF8F5',
+      theme_color: '#FAF8F5'
+    };
+    const link = document.createElement('link');
+    link.rel = 'manifest';
+    link.href = 'data:application/manifest+json,' + encodeURIComponent(JSON.stringify(manifest));
+    document.head.appendChild(link);
+
+    render();
+  </script>
+</body>
+</html>
